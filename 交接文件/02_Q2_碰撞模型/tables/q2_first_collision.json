@@ -1,0 +1,86 @@
+{
+  "started": "2026-08-23T23:00:24+08:00",
+  "scan_step_s": 0.5,
+  "time_range_s": [
+    0.0,
+    442.0
+  ],
+  "scan_count": 885,
+  "transitions": [
+    [
+      412.0,
+      412.5
+    ],
+    [
+      436.0,
+      436.5
+    ],
+    [
+      439.0,
+      439.5
+    ]
+  ],
+  "first_collision": {
+    "time_s": 412.47383768211955,
+    "global_margin_m": -3.858025010572419e-15,
+    "collision_flag": 1,
+    "collision_pairs": [
+      [
+        0,
+        8
+      ]
+    ],
+    "witness_pair": [
+      0,
+      8
+    ],
+    "tested_pairs": 1259,
+    "circle_rejected_pairs": 23272,
+    "total_forbidden_pairs": 24531,
+    "refinement_left_s": 412.0,
+    "refinement_right_s": 412.5,
+    "refinement_time_tolerance_s": 1e-10,
+    "refinement_margin_abs_m": 3.858025010572419e-15,
+    "refinement_evaluations": 7,
+    "refinement_pass": true
+  },
+  "stability": [
+    {
+      "scan_step_s": 1.0,
+      "transitions": [
+        [
+          412.0,
+          413.0
+        ],
+        [
+          436.0,
+          437.0
+        ],
+        [
+          439.0,
+          440.0
+        ]
+      ],
+      "refined_time_s": 412.4738376821191,
+      "refined_margin_m": 7.882583474838611e-15
+    },
+    {
+      "scan_step_s": 2.0,
+      "transitions": [
+        [
+          412.0,
+          414.0
+        ],
+        [
+          438.0,
+          440.0
+        ]
+      ],
+      "refined_time_s": 412.4738376821193,
+      "refined_margin_m": 4.3576253716537394e-15
+    }
+  ],
+  "unique_evaluations": 885,
+  "elapsed_s": 22.34887859999435,
+  "pass": true
+}

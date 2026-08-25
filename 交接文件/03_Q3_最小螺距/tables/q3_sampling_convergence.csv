@@ -1,0 +1,4 @@
+﻿samples,pitch_m,feasible,global_min_margin_m,critical_head_theta,critical_head_radius_m,witness_pair_zero_based,witness_pair_paper_numbering,collision_pairs_zero_based,sampled_states,refined_states,tested_pairs,circle_rejected_pairs,total_forbidden_pairs
+33,0.450341796875,True,4.395377842164594e-06,63.7970908289609,4.5726005385329715,,,[],33,142,1468,23063,24531
+65,0.450341796875,True,4.395377842247861e-06,63.7970908315911,4.572600538721489,,,[],65,170,1468,23063,24531
+129,0.450341796875,True,4.395377839416792e-06,63.7970908453588,4.572600539708277,,,[],129,288,1468,23063,24531
