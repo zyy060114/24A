@@ -33,7 +33,7 @@ def _resolve_paths() -> tuple[Path, Path, Path | None]:
         return HERE.parent, HERE.parent / "tables" / "result4_template.xlsx", None
     project_root = HERE.parents[2]
     control_root = HERE.parents[1]
-    delivery = control_root / "03-deliverables" / "04_Q4_调头路径_p0450342扩展"
+    delivery = control_root / "03-deliverables" / "04_Q4_调头路径"
     return delivery, project_root / "附件" / "result4.xlsx", REPO_HANDOFF
 
 
@@ -344,9 +344,9 @@ $$w_i=w_{{i-1}}\\frac{{(P_i-P_{{i-1}})\\cdot\\tau_{{i-1}}}}{{(P_i-P_{{i-1}})\\cd
 
 
 def _write_readme(output: Path) -> None:
-    text = """# 04_Q4_调头路径_p0450342扩展
+    text = """# 04_Q4_调头路径
 
-本目录是用户指定的 `p=0.450342 m` 第四问扩展计算交接包。入口文档为 `04_Q4_p0450342_建模手交接.md`，结果表在 `tables/`，复现代码在 `code/`。
+本目录是第四问交付包。本次计算采用用户指定的 `p=0.450342 m` 扩展口径。入口文档为 `04_Q4_调头路径_论文手审阅.md`，结果表在 `tables/`，复现代码在 `code/`。
 
 注意：题面第四问原始螺距为1.7 m；本目录是继承第三问最小安全螺距的扩展口径。当前严格2:1边界双圆弧基线发生碰撞，不能直接作为无碰撞最终方案。
 """
@@ -437,7 +437,7 @@ def main() -> int:
     (tables / "q4_p0450342_evidence.json").write_text(json.dumps(evidence, ensure_ascii=False, indent=2), encoding="utf-8")
     _write_validation_markdown(geometry, states, workbook_check, first_collision, tables / "Q4_p0450342_验证结果.md")
     _write_formula_audit(tables / "Q4_p0450342_公式自审.md")
-    _write_handoff(geometry, states, first_collision, delivery / "04_Q4_p0450342_建模手交接.md")
+    _write_handoff(geometry, states, first_collision, delivery / "04_Q4_调头路径_论文手审阅.md")
     _write_readme(delivery / "README.md")
     _copy_code(code)
     if repo_target is not None:

@@ -13,7 +13,7 @@ from openpyxl import Workbook
 from scipy.optimize import minimize_scalar
 
 HERE = Path(__file__).resolve().parent
-Q4_CODE = HERE.parents[1] / "04_Q4_调头路径_p0450342扩展" / "code"
+Q4_CODE = HERE.parents[1] / "04_Q4_调头路径" / "code"
 if str(Q4_CODE) not in sys.path:
     sys.path.insert(0, str(Q4_CODE))
 import q4_result4_p0450342 as q4  # noqa: E402
@@ -175,10 +175,10 @@ def _write_outputs(result, coarse_rows, local_candidates, peak_state):
     ws2.append(["把手", "速度倍率K_i", "按最大龙头速度回代后的速度/m/s"])
     for index, coefficient in enumerate(peak_state["coefficients"]):
         ws2.append([f"P_{index}", abs(float(coefficient)), abs(float(coefficient)) * result["search"]["head_speed_max_m_per_s"]])
-    wb.save(tables / "result5_p0450342.xlsx")
+    wb.save(tables / "result5.xlsx")
     lines = _handoff_markdown(result)
-    (HERE.parent / "02_Q5_p0450342_最大速度_论文手交接.md").write_text(lines, encoding="utf-8")
-    (HERE.parent / "README.md").write_text("# Q5：p=0.450342 m 扩展场景最大允许龙头速度\n\n正式交接稿：`02_Q5_p0450342_最大速度_论文手交接.md`。\n\n机器结果：`tables/q5_p0450342_evidence.json`、`tables/result5_p0450342.xlsx`。\n", encoding="utf-8")
+    (HERE.parent / "05_Q5_最大速度_论文手审阅.md").write_text(lines, encoding="utf-8")
+    (HERE.parent / "README.md").write_text("# Q5：p=0.450342 m 扩展场景最大允许龙头速度\n\n正式交接稿：`05_Q5_最大速度_论文手审阅.md`。\n\n机器结果：`tables/q5_p0450342_evidence.json`、`tables/result5.xlsx`。\n", encoding="utf-8")
 
 
 def _handoff_markdown(result):
@@ -262,7 +262,7 @@ U_{{\\max}}=\\frac{{2}}{{K_{{\\max}}}},\\qquad K_{{\\max}}=\\max_{{t,i}}|K_i(t)|
 
 ## 6. 模型检验、局限与下一问接口
 
-- Q4路径几何和速度递推由 `04_Q4_调头路径_p0450342扩展` 提供；Q4证据文件确认半径比、相切残差、速度分母和碰撞状态。
+- Q4路径几何和速度递推由 `../04_Q4_调头路径` 提供；Q4证据文件确认半径比、相切残差、速度分母和碰撞状态。
 - 粗扫与局部极值结果已保存；粗扫最大倍率与连续局部最大倍率之差为 {s['coarse_to_continuous_k_difference']:.3e}。
 - 速度上限回代后最大把手速度为 {s['max_back_substituted_speed_m_per_s']:.12f} m/s，与2 m/s约束一致。
 - 独立中心差分步长为 (h={v['step_s']}) s，最大速度向量误差为 {v['max_velocity_vector_error_m_per_s']:.3e} m/s。
@@ -273,7 +273,7 @@ U_{{\\max}}=\\frac{{2}}{{K_{{\\max}}}},\\qquad K_{{\\max}}=\\max_{{t,i}}|K_i(t)|
 
 `Q4固定路径 → 全路径位置恢复 → 切向量 → k_i/K_i → 连续极值 → K_max → 2/K_max → 回代验证`
 
-证据文件：`tables/q5_p0450342_evidence.json`、`tables/q5_p0450342_coarse_scan.csv`、`tables/q5_p0450342_local_extrema.csv`、`tables/result5_p0450342.xlsx`。
+证据文件：`tables/q5_p0450342_evidence.json`、`tables/q5_p0450342_coarse_scan.csv`、`tables/q5_p0450342_local_extrema.csv`、`tables/result5.xlsx`。
 '''
 
 

@@ -1,8 +1,8 @@
 # Q5：p=0.450342 m 扩展场景最大允许龙头速度
 
-正式交接稿：`02_Q5_p0450342_最大速度_论文手交接.md`。
+正式交接稿：`05_Q5_最大速度_论文手审阅.md`。
 
-机器结果：`tables/q5_p0450342_evidence.json`、`tables/result5_p0450342.xlsx`。
+机器结果：`tables/q5_p0450342_evidence.json`、`tables/result5.xlsx`。
 
 图表：`figures/图1_Q5_p0450342_速度倍率全时段.png`、`figures/图1_Q5_p0450342_速度倍率全时段.svg`。
 
