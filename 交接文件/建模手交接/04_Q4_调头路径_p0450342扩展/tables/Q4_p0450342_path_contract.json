@@ -1,0 +1,80 @@
+{
+  "contract_version": "Q4-P0450342-PATH-001",
+  "pitch_m": 0.450342,
+  "q3_feasible_upper_m": 0.450341796875,
+  "official_q4_pitch_m": 1.7,
+  "scenario": "user-directed Q3-to-Q4 extension; strict 2:1 boundary-endpoint S-biarc",
+  "turn_radius_m": 4.5,
+  "radius_ratio_large_to_small": 2.0,
+  "theta_in": 62.784137127578894,
+  "theta_out": 62.784137127578894,
+  "inbound_domain": "s<0",
+  "turn_domain_s": [
+    0.0,
+    13.995605672253648
+  ],
+  "outbound_domain": "s>length",
+  "point_in_m": [
+    4.494878146403669,
+    -0.2146402780997092
+  ],
+  "point_out_m": [
+    -4.494878146403669,
+    0.2146402780997092
+  ],
+  "tangent_in": [
+    -0.06359923437007123,
+    -0.9979755194329872
+  ],
+  "tangent_out": [
+    -0.06359923437007123,
+    -0.9979755194329872
+  ],
+  "center_large_m": [
+    1.5005718503780714,
+    -0.023818374968347544
+  ],
+  "center_small_m": [
+    -2.9977249983908703,
+    0.11922932653402837
+  ],
+  "join_m": [
+    -1.4982927154678891,
+    0.07154675936656973
+  ],
+  "radius_large_m": 3.000380508057804,
+  "radius_small_m": 1.500190254028902,
+  "sweep_large_rad": 3.1097401667704325,
+  "sweep_small_rad": 3.109740166770433,
+  "length_large_m": 9.330403781502431,
+  "length_small_m": 4.6652018907512165,
+  "turn_length_m": 13.995605672253648,
+  "curvature_sign_large": -1,
+  "curvature_sign_small": 1,
+  "maximum_path_radius_m": 4.5,
+  "circle_tangency_residual": 1.7763568394002505e-15,
+  "endpoint_tangent_error": 0.0,
+  "joint_tangent_error": 2.0816681711721685e-17,
+  "path_interface": {
+    "point": "q4_small_collision_map.build_turn_path(geometry).point(s)",
+    "tangent": "q4_result4_p0450342.path_tangent(path,s)",
+    "head_coordinate": "q4_result4_p0450342.handle_coordinates(path,head_s,n_handles=224)"
+  },
+  "root_continuation_rule": "逐把手定长圆求交；选择满足后向约束且与上一节点/上一状态连续的有效根；不能独立使用最近根跨越多根分支",
+  "collision_validation_relative_paths": [
+    "tables/q4_p0450342_collision_states.csv",
+    "tables/q4_p0450342_evidence.json",
+    "tables/Q4_p0450342_验证结果.md"
+  ],
+  "collision_summary": {
+    "integer_state_count": 201,
+    "collision_state_count": 88,
+    "first_continuous_collision_s": 12.829297347006513,
+    "minimum_integer_margin_m": -0.37119495113439094,
+    "minimum_integer_margin_time_s": 30,
+    "minimum_integer_margin_pair": [
+      1,
+      17
+    ]
+  }
+}

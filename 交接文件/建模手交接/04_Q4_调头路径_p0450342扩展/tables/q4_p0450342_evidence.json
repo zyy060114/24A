@@ -1,0 +1,65 @@
+{
+  "run_id": "Q4-P0450342-20260825-225247",
+  "pitch_m": 0.450342,
+  "official_q4_pitch_m": 1.7,
+  "scenario": "user-directed Q3-to-Q4 extension, not the original Q4 pitch",
+  "pitch_selection": {
+    "q3_infeasible_lower_m": 0.45033203125,
+    "q3_feasible_upper_m": 0.450341796875,
+    "q3_midpoint_estimate_m": 0.4503369140625,
+    "selected_m": 0.450342,
+    "selected_minus_upper_m": 2.031250000422702e-07,
+    "q3_selected_recheck_min_margin_m": 4.598112163634038e-06,
+    "rule": "round the verified feasible upper endpoint upward at six decimal places"
+  },
+  "trajectory": {
+    "interpretation": "strict 2:1 boundary-endpoint S-biarc",
+    "turn_radius_m": 4.5,
+    "turn_length_m": 13.995605672253648,
+    "radius_large_m": 3.000380508057804,
+    "radius_small_m": 1.500190254028902,
+    "maximum_path_radius_m": 4.5,
+    "circle_tangency_residual": 1.7763568394002505e-15,
+    "endpoint_tangent_error": 0.0,
+    "joint_tangent_error": 2.0816681711721685e-17
+  },
+  "calculation": {
+    "time_range_s": [
+      -100,
+      100
+    ],
+    "time_step_s": 1,
+    "state_count": 201,
+    "handle_count": 224,
+    "collision_state_count": 88,
+    "collision_free_state_count": 113,
+    "minimum_global_margin_m": -0.37119495113439094,
+    "minimum_margin_time_s": 30,
+    "minimum_margin_witness_pair": [
+      1,
+      17
+    ],
+    "first_continuous_collision": {
+      "time_s": 12.829297347006513,
+      "margin_m": -1.0236353431558598e-10,
+      "witness_pair": [
+        1,
+        15
+      ],
+      "bracket_s": [
+        12.75,
+        13.0
+      ]
+    },
+    "maximum_speed_m_per_s": 1.5362556275265666,
+    "minimum_speed_denominator": 0.8645951702260422
+  },
+  "workbook_validation": {
+    "required_sheets_ok": true,
+    "time_headers_ok": true,
+    "required_cells_populated": true,
+    "formula_error_count": 0,
+    "formula_errors": []
+  },
+  "warning": "Q3 safety only covers the inward spiral. This Q4 baseline has collisions and is not a collision-free Q4 solution."
+}

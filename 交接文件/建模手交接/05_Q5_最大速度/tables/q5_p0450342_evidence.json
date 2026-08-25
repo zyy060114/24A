@@ -1,0 +1,43 @@
+{
+  "run_id": "Q5-P0450342-20260825-230341",
+  "pitch_m": 0.450342,
+  "official_q4_pitch_m": 1.7,
+  "scenario": "user-directed Q3-to-Q4 extension; not original Q4 pitch",
+  "q4_collision_warning": {
+    "collision_state_count": 88,
+    "first_continuous_collision_s": 12.829297347006513,
+    "integer_minimum_margin_m": -0.37119495113439094,
+    "integer_minimum_margin_time_s": 30,
+    "integer_minimum_margin_pair": [
+      1,
+      17
+    ],
+    "first_continuous_contact_pair": [
+      1,
+      15
+    ],
+    "speed_scaling_cannot_remove_geometry_collision": true
+  },
+  "search": {
+    "coarse_step_s": 0.25,
+    "coarse_state_count": 801,
+    "local_step_s": 0.01,
+    "local_state_count": 151,
+    "local_candidate_count": 224,
+    "coarse_k_max": 1.6110856724142353,
+    "coarse_peak_time_s": 14.75,
+    "coarse_peak_node": 6,
+    "continuous_k_max": 1.6161478322419565,
+    "peak_time_s": 14.794330327614018,
+    "peak_node": 7,
+    "head_speed_max_m_per_s": 1.2375105544803753,
+    "max_back_substituted_speed_m_per_s": 2.0000000000000004,
+    "minimum_speed_denominator": 0.8645816429830316,
+    "peak_state_minimum_speed_denominator": 1.2241826412568486,
+    "coarse_to_continuous_k_difference": 0.00506215982772118
+  },
+  "independent_difference": {
+    "step_s": 1e-05,
+    "max_velocity_vector_error_m_per_s": 6.925188019572967e-07
+  }
+}
